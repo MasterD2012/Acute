@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acute Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Acute Music</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#playlists">Playlists</a>
+            <a href="#login">Login</a>
+            <a href="#upload">Upload</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to Acute Music</h2>
+            <p>Total Songs: <span id="totalSongs">0</span></p>
+            <h3>Trending Songs</h3>
+            <ul id="trendingSongs"></ul>
+            <h3>Popular Songs</h3>
+            <ul id="popularSongs"></ul>
+        </section>
+        <section id="playlists">
+            <h2>Your Playlists</h2>
+            <ul id="userPlaylists"></ul>
+            <form id="createPlaylistForm">
+                <input type="text" placeholder="New Playlist Name" id="playlistName" required>
+                <button type="submit">Create Playlist</button>
+            </form>
+        </section>
+        <section id="login">
+            <h2>Login / Sign Up</h2>
+            <form id="authForm">
+                <input type="text" placeholder="Username" id="username" required>
+                <input type="password" placeholder="Password" id="password" required>
+                <button type="submit">Login / Sign Up</button>
+            </form>
+        </section>
+        <section id="upload">
+            <h2>Upload a Song</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".mp3,.wav" required>
+                <input type="text" placeholder="Title" id="songTitle" required>
+                <input type="text" placeholder="Artist" id="songArtist" required>
+                <input type="text" placeholder="Album" id="songAlbum" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
